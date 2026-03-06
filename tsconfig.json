@@ -1,0 +1,29 @@
+{
+    "extends": "@adonisjs/mrm-preset/_tsconfig",
+    "compilerOptions": {
+        "outDir": "build",
+        "rootDir": "./",
+        "sourceMap": true,
+        "declaration": true,
+        "module": "CommonJS",
+        "target": "ES2021",
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "types": [
+            "@adonisjs/core",
+            "@adonisjs/sink"
+        ]
+    },
+    "include": [
+        "src",
+        "providers",
+        "adonis-typings",
+        "instructions.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

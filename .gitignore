@@ -1,0 +1,11 @@
+node_modules
+build
+.env
+coverage
+.DS_Store
+ts-errors.txt
+test-crlf.js
+test-regex.js
+test-ts-morph.js
+test-ts-morph.ts
+test-yaml.js

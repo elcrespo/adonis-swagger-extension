@@ -1,0 +1,22 @@
+import { SwaggerConfig } from 'adonis-swagger-extension/build/src/SwaggerManager';
+
+export default {
+  path: __dirname + '/../',
+  title: 'Adonis API',
+  version: '1.0.0',
+  description: 'Swagger API description',
+  tagIndex: 2,
+  info: {
+    title: 'title',
+    version: '1.0.0',
+    description: 'Adonis Swagger API Docs'
+  },
+  typesPaths: [
+    'app/Models/**/*.ts',
+    'contracts/**/*.ts'
+  ],
+  controllersPaths: [
+    'app/Controllers/Http/**/*.ts'
+  ],
+  securitySchemes: {},
+} as SwaggerConfig;

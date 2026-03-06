@@ -1,0 +1,56 @@
+{
+  "name": "adonis-swagger-extension",
+  "version": "1.0.0",
+  "description": "Adonis v5 Swagger extension with ts-morph",
+  "main": "build/providers/SwaggerProvider.js",
+  "types": "build/adonis-typings/index.d.ts",
+  "files": [
+    "build/adonis-typings",
+    "build/providers",
+    "build/src",
+    "build/instructions.js",
+    "build/instructions.md",
+    "build/templates"
+  ],
+  "scripts": {
+    "clean": "del-cli build",
+    "compile": "npm run clean && tsc && copyfiles -u 1 templates/config.txt build/templates",
+    "build": "npm run compile",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "swagger-ui-dist": "^5.11.0",
+    "ts-morph": "^21.0.1",
+    "yaml": "^2.3.4"
+  },
+  "peerDependencies": {
+    "@adonisjs/core": "^5.8.0"
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^5.8.0",
+    "@adonisjs/mrm-preset": "^5.0.3",
+    "@adonisjs/sink": "^5.4.3",
+    "@types/node": "^20.10.4",
+    "@types/swagger-ui-dist": "^3.30.6",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.3.3"
+  },
+  "adonisjs": {
+    "instructions": "./build/instructions.js",
+    "instructionsMd": "./build/instructions.md",
+    "types": "adonis-swagger-extension",
+    "providers": [
+      "adonis-swagger-extension"
+    ],
+    "templates": {
+      "config": [
+        {
+          "src": "config.txt",
+          "dest": "swagger"
+        }
+      ]
+    }
+  }
+}
