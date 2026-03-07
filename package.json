@@ -16,7 +16,23 @@
     "clean": "del-cli build",
     "compile": "npm run clean && tsc && copyfiles -u 1 templates/config.txt build/templates",
     "build": "npm run compile",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "commit": "git-cz",
+    "release": "np --message=\"chore(release): %s\"",
+    "version": "npm run build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "np": {
+    "contents": ".",
+    "anyBranch": false
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
   },
   "dependencies": {
     "swagger-ui-dist": "^5.11.0",
@@ -33,7 +49,10 @@
     "@types/node": "^20.10.4",
     "@types/swagger-ui-dist": "^3.30.6",
     "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^5.1.0",
+    "git-cz": "^4.9.0",
+    "np": "^11.0.2",
     "tsx": "^4.21.0",
     "typescript": "^5.3.3"
   },
