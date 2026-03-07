@@ -46,6 +46,9 @@
     "@adonisjs/core": "^5.8.0",
     "@adonisjs/mrm-preset": "^5.0.3",
     "@adonisjs/sink": "^5.4.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
     "@types/node": "^20.10.4",
     "@types/swagger-ui-dist": "^3.30.6",
     "copyfiles": "^2.4.1",
@@ -53,6 +56,7 @@
     "del-cli": "^5.1.0",
     "git-cz": "^4.9.0",
     "np": "^11.0.2",
+    "semantic-release": "^24.2.9",
     "tsx": "^4.21.0",
     "typescript": "^5.3.3"
   },
