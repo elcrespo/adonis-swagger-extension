@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.1.0...v1.2.0) (2026-03-10)
+
+
+### Features
+
+* add enabled flag to swagger config to support environment toggling ([50cb12c](https://github.com/elcrespo/adonis-swagger-extension/commit/50cb12cc00252e3b9fa571ce945889435c81d881))
+
 # [1.1.0](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.0.0...v1.1.0) (2026-03-07)
 
 
