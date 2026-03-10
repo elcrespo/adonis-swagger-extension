@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.2.0...v1.2.1) (2026-03-10)
+
+
+### Bug Fixes
+
+* generate typescript types by including adonis-typings/index.ts ([9abaabb](https://github.com/elcrespo/adonis-swagger-extension/commit/9abaabb2a1935df8cb3db874af7dba2c245e991e))
+
 # [1.2.0](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.1.0...v1.2.0) (2026-03-10)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "adonis-swagger-extension",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Adonis v5 Swagger extension with ts-morph",
   "main": "build/providers/SwaggerProvider.js",
   "types": "build/adonis-typings/index.d.ts",
