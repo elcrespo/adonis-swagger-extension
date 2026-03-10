@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.2.1...v1.3.0) (2026-03-10)
+
+
+### Features
+
+* add swagger eject command ([f409950](https://github.com/elcrespo/adonis-swagger-extension/commit/f40995047c342cce4195f0fc0adc1f4a318a4b2b))
+
 ## [1.2.1](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.2.0...v1.2.1) (2026-03-10)
 
 
