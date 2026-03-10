@@ -8,9 +8,13 @@
     "build/adonis-typings",
     "build/providers",
     "build/src",
+    "build/commands",
     "build/instructions.js",
     "build/instructions.md",
-    "build/templates"
+    "build/templates",
+    "src",
+    "providers",
+    "adonis-typings"
   ],
   "scripts": {
     "clean": "del-cli build",
@@ -70,6 +74,9 @@
     "types": "adonis-swagger-extension",
     "providers": [
       "adonis-swagger-extension"
+    ],
+    "commands": [
+      "./build/commands/SwaggerEject.js"
     ],
     "templates": {
       "config": [

@@ -20,7 +20,8 @@
         "src",
         "providers",
         "adonis-typings",
-        "instructions.ts"
+        "instructions.ts",
+        "commands"
     ],
     "exclude": [
         "node_modules",

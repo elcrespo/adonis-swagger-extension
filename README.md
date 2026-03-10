@@ -189,6 +189,29 @@ export default class UsersController {
 
 ---
 
+## 🏃‍♂️ Ejecting the Extension
+
+If you want complete control over your Swagger generator, or simply don't want `adonis-swagger-extension` hanging around your `package.json` forever, you can **eject** the code natively into your app!
+
+```bash
+node ace swagger:eject
+```
+
+Running this command will:
+1. Copy all the TS parser logic (`SwaggerManager`, `TypeParser`, `ControllerParser`) directly into `app/Services/Swagger/`.
+2. Copy the extension's types into `contracts/swagger.ts`.
+3. Create a decoupled `providers/SwaggerProvider.ts` in your app.
+
+After ejection, simply install the underlying dependencies (`ts-morph`, `swagger-ui-dist`, `yaml`), register the local provider in your `.adonisrc.json`, and uninstall the package:
+
+```bash
+npm uninstall adonis-swagger-extension
+```
+
+You now own the entire Swagger generator source code!
+
+---
+
 ## 👀 Viewing the Documentation
 
 The package automatically mounts two routes in your Adonis application at runtime:
