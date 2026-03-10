@@ -68,6 +68,14 @@ export default {
 } as SwaggerConfig;
 ```
 
+### Note on BodyParser (`config/bodyparser.ts`)
+
+**`adonis-swagger-extension` works completely independently of your body parser.**
+
+This extension uses `ts-morph` to purely analyze your TypeScript code statically. It generates the OpenAPI JSON spec by reading your code (AST) and does not intercept network requests or require runtime parsing. You do not need to modify your `config/bodyparser.ts` or add unique middleware for this extension to function. 
+
+However, remember that when testing requests from the Swagger UI (`/docs`), those requests will hit your typical Adonis application endpoints. If your API expects JSON, `multipart/form-data`, or raw XML, make sure your standard Adonis body parser handles those types properly for your actual API to function!
+
 ---
 
 ## 🧠 Defining Types & Interfaces
