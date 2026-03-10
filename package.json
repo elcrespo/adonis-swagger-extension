@@ -19,7 +19,8 @@
     "prepublishOnly": "npm run build",
     "commit": "git-cz",
     "release": "np --message=\"chore(release): %s\"",
-    "version": "npm run build"
+    "version": "npm run build",
+    "prepare": "husky"
   },
   "config": {
     "commitizen": {
@@ -46,6 +47,8 @@
     "@adonisjs/core": "^5.8.0",
     "@adonisjs/mrm-preset": "^5.0.3",
     "@adonisjs/sink": "^5.4.3",
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.2",
@@ -55,6 +58,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^5.1.0",
     "git-cz": "^4.9.0",
+    "husky": "^9.1.7",
     "np": "^11.0.2",
     "semantic-release": "^24.2.9",
     "tsx": "^4.21.0",
