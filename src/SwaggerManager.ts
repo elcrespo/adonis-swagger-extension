@@ -24,6 +24,7 @@ export interface SwaggerConfig {
     showFullPath?: boolean;
     typesPaths?: string[]; // Specifically for multiple folders
     controllersPaths?: string[]; // Specifically for controller JSDoc parsing
+    enabled?: boolean; // Enable or disable swagger routes
 }
 
 export class SwaggerManager {

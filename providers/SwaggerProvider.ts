@@ -5,37 +5,37 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export default class SwaggerProvider {
-    constructor(protected app: ApplicationContract) { }
+  constructor(protected app: ApplicationContract) { }
 
-    public register() {
-        this.app.container.singleton('Adonis/Addons/Swagger', () => {
-            return {
-                generate: (router: any, config: SwaggerConfig) => {
-                    return SwaggerManager.generate(router, config);
-                },
-            };
-        });
+  public register() {
+    this.app.container.singleton('Adonis/Addons/Swagger', () => {
+      return {
+        generate: (router: any, config: SwaggerConfig) => {
+          return SwaggerManager.generate(router, config);
+        },
+      };
+    });
+  }
+
+  public async boot() {
+    const Route = this.app.container.use('Adonis/Core/Route');
+    const Config = this.app.container.use('Adonis/Core/Config');
+    const swaggerConfig: SwaggerConfig = Config.get('swagger');
+
+    if (!swaggerConfig || swaggerConfig.enabled === false) {
+      this.app.logger.warn('Swagger config not found or explicitly disabled. Skipping swagger routes.');
+      return;
     }
 
-    public async boot() {
-        const Route = this.app.container.use('Adonis/Core/Route');
-        const Config = this.app.container.use('Adonis/Core/Config');
-        const swaggerConfig: SwaggerConfig = Config.get('swagger');
+    // JSON endpoint
+    Route.get('/swagger.json', async ({ response }) => {
+      const spec = SwaggerManager.generate(Route, swaggerConfig);
+      return response.send(spec);
+    });
 
-        if (!swaggerConfig) {
-            this.app.logger.warn('Swagger config not found. Skipping swagger routes.');
-            return;
-        }
-
-        // JSON endpoint
-        Route.get('/swagger.json', async ({ response }) => {
-            const spec = SwaggerManager.generate(Route, swaggerConfig);
-            return response.send(spec);
-        });
-
-        // UI endpoint
-        Route.get('/docs', async ({ response }) => {
-            const uiHtml = `
+    // UI endpoint
+    Route.get('/docs', async ({ response }) => {
+      const uiHtml = `
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -73,20 +73,20 @@ export default class SwaggerProvider {
         </body>
         </html>
       `;
-            return response.header('Content-Type', 'text/html').send(uiHtml);
-        });
+      return response.header('Content-Type', 'text/html').send(uiHtml);
+    });
 
-        // Serve static files for Swagger UI from swagger-ui-dist
-        Route.get('/docs/*', async ({ request, response }) => {
-            const filePath = request.param('*').join('/');
-            const distPath = swaggerUiDist.getAbsoluteFSPath();
-            const absolutePath = path.join(distPath, filePath);
+    // Serve static files for Swagger UI from swagger-ui-dist
+    Route.get('/docs/*', async ({ request, response }) => {
+      const filePath = request.param('*').join('/');
+      const distPath = swaggerUiDist.getAbsoluteFSPath();
+      const absolutePath = path.join(distPath, filePath);
 
-            if (fs.existsSync(absolutePath)) {
-                return response.download(absolutePath);
-            }
+      if (fs.existsSync(absolutePath)) {
+        return response.download(absolutePath);
+      }
 
-            return response.status(404).send('Not found');
-        });
-    }
+      return response.status(404).send('Not found');
+    });
+  }
 }

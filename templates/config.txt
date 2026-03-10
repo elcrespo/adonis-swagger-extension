@@ -11,6 +11,8 @@ export default {
     version: '1.0.0',
     description: 'Adonis Swagger API Docs'
   },
+  // Set to false to disable routing (e.g. for production)
+  // enabled: process.env.NODE_ENV !== 'production',
   typesPaths: [
     'app/Models/**/*.ts',
     'contracts/**/*.ts'

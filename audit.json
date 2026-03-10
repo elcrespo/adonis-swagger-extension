@@ -1,0 +1,818 @@
+﻿{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@adonisjs/bodyparser": {
+      "name": "@adonisjs/bodyparser",
+      "severity": "critical",
+      "isDirect": false,
+      "via": [
+        "@adonisjs/drive",
+        "@adonisjs/http-server",
+        {
+          "source": 1111782,
+          "name": "@adonisjs/bodyparser",
+          "dependency": "@adonisjs/bodyparser",
+          "title": "AdonisJS Path Traversal in Multipart File Handling",
+          "url": "https://github.com/advisories/GHSA-gvq6-hvvp-h34h",
+          "severity": "critical",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<10.1.2"
+        },
+        {
+          "source": 1113072,
+          "name": "@adonisjs/bodyparser",
+          "dependency": "@adonisjs/bodyparser",
+          "title": "AdonisJS vulnerable to Denial of Service (DoS) via Unrestricted Memory Buffering in PartHandler during File Type Detection",
+          "url": "https://github.com/advisories/GHSA-xx9g-fh25-4q64",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=10.1.2"
+        },
+        {
+          "source": 1113074,
+          "name": "@adonisjs/bodyparser",
+          "dependency": "@adonisjs/bodyparser",
+          "title": "AdonisJS multipart body parsing has Prototype Pollution issue",
+          "url": "https://github.com/advisories/GHSA-f5x2-vj4h-vg4c",
+          "severity": "high",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 7.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+          },
+          "range": "<=10.1.2"
+        }
+      ],
+      "effects": [
+        "@adonisjs/core",
+        "@adonisjs/validator"
+      ],
+      "range": "<=10.1.2",
+      "nodes": [
+        "node_modules/@adonisjs/bodyparser"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@adonisjs/core": {
+      "name": "@adonisjs/core",
+      "severity": "critical",
+      "isDirect": true,
+      "via": [
+        "@adonisjs/bodyparser",
+        "@adonisjs/drive",
+        "@adonisjs/http-server",
+        "@adonisjs/validator"
+      ],
+      "effects": [],
+      "range": "1.4.0 - 1.10.0 || 2.7.0 - 6.1.5-26",
+      "nodes": [
+        "node_modules/@adonisjs/core"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@adonisjs/drive": {
+      "name": "@adonisjs/drive",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@adonisjs/http-server"
+      ],
+      "effects": [
+        "@adonisjs/bodyparser",
+        "@adonisjs/core"
+      ],
+      "range": "2.0.0 - 2.3.0",
+      "nodes": [
+        "node_modules/@adonisjs/drive"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@adonisjs/http-server": {
+      "name": "@adonisjs/http-server",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "cookie"
+      ],
+      "effects": [
+        "@adonisjs/bodyparser",
+        "@adonisjs/core",
+        "@adonisjs/drive",
+        "@adonisjs/validator"
+      ],
+      "range": "2.0.1 - 7.2.3",
+      "nodes": [
+        "node_modules/@adonisjs/http-server"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@adonisjs/mrm-preset": {
+      "name": "@adonisjs/mrm-preset",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "git-user-email",
+        "git-user-name"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@adonisjs/mrm-preset"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/mrm-preset",
+        "version": "2.2.4",
+        "isSemVerMajor": true
+      }
+    },
+    "@adonisjs/validator": {
+      "name": "@adonisjs/validator",
+      "severity": "critical",
+      "isDirect": false,
+      "via": [
+        "@adonisjs/bodyparser",
+        "@adonisjs/http-server"
+      ],
+      "effects": [
+        "@adonisjs/core"
+      ],
+      "range": "7.4.0 - 7.4.2 || 8.0.1 - 13.0.2-3",
+      "nodes": [
+        "node_modules/@adonisjs/validator"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@npmcli/arborist": {
+      "name": "@npmcli/arborist",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/metavuln-calculator",
+        "pacote"
+      ],
+      "effects": [
+        "libnpmdiff",
+        "libnpmexec",
+        "libnpmfund",
+        "libnpmpack"
+      ],
+      "range": "<=9.0.0-pre.1",
+      "nodes": [
+        "node_modules/npm/node_modules/@npmcli/arborist"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@npmcli/metavuln-calculator": {
+      "name": "@npmcli/metavuln-calculator",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "pacote"
+      ],
+      "effects": [
+        "@npmcli/arborist"
+      ],
+      "range": "<=8.0.1",
+      "nodes": [
+        "node_modules/npm/node_modules/@npmcli/metavuln-calculator"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@semantic-release/npm": {
+      "name": "@semantic-release/npm",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "npm"
+      ],
+      "effects": [
+        "semantic-release"
+      ],
+      "range": "5.0.0 - 12.0.2",
+      "nodes": [
+        "node_modules/@semantic-release/npm"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "commitizen": {
+      "name": "commitizen",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "inquirer",
+        "lodash"
+      ],
+      "effects": [],
+      "range": ">=2.5.1",
+      "nodes": [
+        "node_modules/commitizen"
+      ],
+      "fixAvailable": true
+    },
+    "cookie": {
+      "name": "cookie",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1103907,
+          "name": "cookie",
+          "dependency": "cookie",
+          "title": "cookie accepts cookie name, path, and domain with out of bounds characters",
+          "url": "https://github.com/advisories/GHSA-pxg6-pf52-xh8x",
+          "severity": "low",
+          "cwe": [
+            "CWE-74"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<0.7.0"
+        }
+      ],
+      "effects": [
+        "@adonisjs/http-server"
+      ],
+      "range": "<0.7.0",
+      "nodes": [
+        "node_modules/cookie"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/core",
+        "version": "6.21.0",
+        "isSemVerMajor": true
+      }
+    },
+    "external-editor": {
+      "name": "external-editor",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "tmp"
+      ],
+      "effects": [
+        "inquirer"
+      ],
+      "range": ">=1.1.1",
+      "nodes": [
+        "node_modules/external-editor"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    },
+    "git-user-email": {
+      "name": "git-user-email",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "parse-git-config"
+      ],
+      "effects": [
+        "@adonisjs/mrm-preset"
+      ],
+      "range": ">=0.2.0",
+      "nodes": [
+        "node_modules/git-user-email"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/mrm-preset",
+        "version": "2.2.4",
+        "isSemVerMajor": true
+      }
+    },
+    "git-user-name": {
+      "name": "git-user-name",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "parse-git-config"
+      ],
+      "effects": [
+        "@adonisjs/mrm-preset"
+      ],
+      "range": ">=1.1.0",
+      "nodes": [
+        "node_modules/git-user-name"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/mrm-preset",
+        "version": "2.2.4",
+        "isSemVerMajor": true
+      }
+    },
+    "inquirer": {
+      "name": "inquirer",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "external-editor"
+      ],
+      "effects": [
+        "commitizen",
+        "inquirer-autosubmit-prompt",
+        "listr-input"
+      ],
+      "range": "3.0.0 - 8.2.6 || 9.0.0 - 9.3.7",
+      "nodes": [
+        "node_modules/commitizen/node_modules/inquirer",
+        "node_modules/inquirer-autosubmit-prompt/node_modules/inquirer",
+        "node_modules/listr-input/node_modules/inquirer"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    },
+    "inquirer-autosubmit-prompt": {
+      "name": "inquirer-autosubmit-prompt",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "inquirer"
+      ],
+      "effects": [
+        "listr-input"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/inquirer-autosubmit-prompt"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    },
+    "libnpmdiff": {
+      "name": "libnpmdiff",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/arborist",
+        "pacote",
+        "tar"
+      ],
+      "effects": [
+        "npm"
+      ],
+      "range": "<=8.0.7",
+      "nodes": [
+        "node_modules/npm/node_modules/libnpmdiff"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "libnpmexec": {
+      "name": "libnpmexec",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/arborist",
+        "pacote"
+      ],
+      "effects": [
+        "npm"
+      ],
+      "range": "<=10.0.0-pre.1",
+      "nodes": [
+        "node_modules/npm/node_modules/libnpmexec"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "libnpmfund": {
+      "name": "libnpmfund",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/arborist"
+      ],
+      "effects": [
+        "npm"
+      ],
+      "range": "<=6.0.2",
+      "nodes": [
+        "node_modules/npm/node_modules/libnpmfund"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "libnpmpack": {
+      "name": "libnpmpack",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/arborist",
+        "pacote"
+      ],
+      "effects": [
+        "npm"
+      ],
+      "range": "<=9.0.0-pre.1",
+      "nodes": [
+        "node_modules/npm/node_modules/libnpmpack"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "listr-input": {
+      "name": "listr-input",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "inquirer",
+        "inquirer-autosubmit-prompt"
+      ],
+      "effects": [
+        "np"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/listr-input"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    },
+    "lodash": {
+      "name": "lodash",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112455,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "range": ">=4.0.0 <=4.17.22"
+        }
+      ],
+      "effects": [
+        "commitizen"
+      ],
+      "range": "4.0.0 - 4.17.21",
+      "nodes": [
+        "node_modules/commitizen/node_modules/lodash"
+      ],
+      "fixAvailable": true
+    },
+    "np": {
+      "name": "np",
+      "severity": "low",
+      "isDirect": true,
+      "via": [
+        "listr-input"
+      ],
+      "effects": [],
+      "range": ">=2.17.0",
+      "nodes": [
+        "node_modules/np"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    },
+    "npm": {
+      "name": "npm",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@npmcli/arborist",
+        "libnpmdiff",
+        "libnpmexec",
+        "libnpmfund",
+        "libnpmpack",
+        "pacote",
+        "tar"
+      ],
+      "effects": [
+        "@semantic-release/npm"
+      ],
+      "range": "<=11.7.0",
+      "nodes": [
+        "node_modules/npm"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "pacote": {
+      "name": "pacote",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "tar"
+      ],
+      "effects": [
+        "@npmcli/arborist",
+        "@npmcli/metavuln-calculator",
+        "libnpmdiff",
+        "libnpmexec",
+        "libnpmpack",
+        "npm"
+      ],
+      "range": "5.0.0 - 21.0.0",
+      "nodes": [
+        "node_modules/npm/node_modules/@npmcli/metavuln-calculator/node_modules/pacote",
+        "node_modules/npm/node_modules/pacote"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "parse-git-config": {
+      "name": "parse-git-config",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1103364,
+          "name": "parse-git-config",
+          "dependency": "parse-git-config",
+          "title": "Prototype Pollution Vulnerability in parse-git-config",
+          "url": "https://github.com/advisories/GHSA-8g77-54rh-46hx",
+          "severity": "high",
+          "cwe": [
+            "CWE-200",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=3.0.0"
+        }
+      ],
+      "effects": [
+        "git-user-email",
+        "git-user-name"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/parse-git-config"
+      ],
+      "fixAvailable": {
+        "name": "@adonisjs/mrm-preset",
+        "version": "2.2.4",
+        "isSemVerMajor": true
+      }
+    },
+    "semantic-release": {
+      "name": "semantic-release",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@semantic-release/npm"
+      ],
+      "effects": [],
+      "range": "15.9.4 - 25.0.0-beta.1",
+      "nodes": [
+        "node_modules/semantic-release"
+      ],
+      "fixAvailable": {
+        "name": "semantic-release",
+        "version": "15.9.3",
+        "isSemVerMajor": true
+      }
+    },
+    "tar": {
+      "name": "tar",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112329,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS",
+          "url": "https://github.com/advisories/GHSA-r6q2-hw4h-h46w",
+          "severity": "high",
+          "cwe": [
+            "CWE-176"
+          ],
+          "cvss": {
+            "score": 8.8,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
+          },
+          "range": "<=7.5.3"
+        },
+        {
+          "source": 1112659,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal",
+          "url": "https://github.com/advisories/GHSA-34x7-hfp2-rc4v",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-59"
+          ],
+          "cvss": {
+            "score": 8.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+          },
+          "range": "<7.5.7"
+        },
+        {
+          "source": 1113300,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization",
+          "url": "https://github.com/advisories/GHSA-8qq5-rm4j-mr97",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=7.5.2"
+        },
+        {
+          "source": 1113375,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction",
+          "url": "https://github.com/advisories/GHSA-83g3-92jg-28cx",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 7.1,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+          },
+          "range": "<7.5.8"
+        },
+        {
+          "source": 1114071,
+          "name": "tar",
+          "dependency": "tar",
+          "title": "tar has Hardlink Path Traversal via Drive-Relative Linkpath",
+          "url": "https://github.com/advisories/GHSA-qffp-2rhf-9h96",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-59"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=7.5.9"
+        }
+      ],
+      "effects": [
+        "libnpmdiff",
+        "npm",
+        "pacote"
+      ],
+      "range": "<=7.5.9",
+      "nodes": [
+        "node_modules/npm/node_modules/cacache/node_modules/tar",
+        "node_modules/npm/node_modules/node-gyp/node_modules/tar",
+        "node_modules/npm/node_modules/tar"
+      ],
+      "fixAvailable": {
+        "name": "@semantic-release/npm",
+        "version": "4.0.2",
+        "isSemVerMajor": true
+      }
+    },
+    "tmp": {
+      "name": "tmp",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1109537,
+          "name": "tmp",
+          "dependency": "tmp",
+          "title": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter",
+          "url": "https://github.com/advisories/GHSA-52f5-9888-hmc6",
+          "severity": "low",
+          "cwe": [
+            "CWE-59"
+          ],
+          "cvss": {
+            "score": 2.5,
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": "<=0.2.3"
+        }
+      ],
+      "effects": [
+        "external-editor"
+      ],
+      "range": "<=0.2.3",
+      "nodes": [
+        "node_modules/tmp"
+      ],
+      "fixAvailable": {
+        "name": "np",
+        "version": "2.16.1",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 9,
+      "moderate": 2,
+      "high": 15,
+      "critical": 3,
+      "total": 29
+    },
+    "dependencies": {
+      "prod": 30,
+      "dev": 1224,
+      "optional": 47,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1253
+    }
+  }
+}

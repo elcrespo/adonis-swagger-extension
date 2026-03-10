@@ -46,6 +46,8 @@ export default {
     version: '1.0.0',
     description: ''
   },
+  // Disable swagger in production
+  // enabled: process.env.NODE_ENV !== 'production',
   // Add as many type/interface source folders as you need!
   typesPaths: [
     'app/Models/**/*.ts',
