@@ -2,6 +2,14 @@
   "name": "adonis-swagger-extension",
   "version": "1.3.0",
   "description": "Adonis v5 Swagger extension with ts-morph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcrespo/adonis-swagger-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elcrespo/adonis-swagger-extension/issues"
+  },
+  "homepage": "https://github.com/elcrespo/adonis-swagger-extension#readme",
   "main": "build/providers/SwaggerProvider.js",
   "types": "build/adonis-typings/index.d.ts",
   "files": [
