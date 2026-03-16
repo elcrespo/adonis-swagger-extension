@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.2...v1.3.3) (2026-03-16)
+
+
+### Bug Fixes
+
+* trigger release ([53149b3](https://github.com/elcrespo/adonis-swagger-extension/commit/53149b3c59d95352b4c83992cab60bc7b5997445))
+
 ## [1.3.2](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.1...v1.3.2) (2026-03-16)
 
 
