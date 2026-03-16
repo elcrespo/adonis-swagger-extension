@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.1...v1.3.2) (2026-03-16)
+
+
+### Bug Fixes
+
+* correct swagger eject command path in adonisjs configuration ([13328fd](https://github.com/elcrespo/adonis-swagger-extension/commit/13328fd80a832d21a7c02313877035259b938a9a))
+
 ## [1.3.1](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.0...v1.3.1) (2026-03-11)
 
 
