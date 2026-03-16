@@ -84,7 +84,7 @@
       "adonis-swagger-extension"
     ],
     "commands": [
-      "./build/commands/SwaggerEject.js"
+      "adonis-swagger-extension/build/commands/SwaggerEject.js"
     ],
     "templates": {
       "config": [
