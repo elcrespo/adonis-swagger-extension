@@ -16,7 +16,6 @@
     "build/adonis-typings",
     "build/providers",
     "build/src",
-    "build/commands",
     "build/instructions.js",
     "build/instructions.md",
     "build/templates",
@@ -83,9 +82,7 @@
     "providers": [
       "adonis-swagger-extension"
     ],
-    "commands": [
-      "adonis-swagger-extension/build/commands/SwaggerEject.js"
-    ],
+
     "templates": {
       "config": [
         {
