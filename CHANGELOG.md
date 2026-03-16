@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.3...v1.3.4) (2026-03-16)
+
+
+### Bug Fixes
+
+* remove swagger eject command to resolve module resolution error during configure ([daa6e7e](https://github.com/elcrespo/adonis-swagger-extension/commit/daa6e7e1e99a1883ee007143d029b2218beb515e))
+
 ## [1.3.3](https://github.com/elcrespo/adonis-swagger-extension/compare/v1.3.2...v1.3.3) (2026-03-16)
 
 
